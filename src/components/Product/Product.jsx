@@ -3,6 +3,9 @@ import "./Product.css";
 
 const Product = (pros) => {
   const { img, name, category, seller, ratings } = pros.product;
+
+  const addItem = pros.addItem;
+
   return (
     <div className="product">
       <div className="product_info">
@@ -12,7 +15,9 @@ const Product = (pros) => {
         <p>Manufracturer: {seller}</p>
         <p>Rating: {ratings} star</p>
       </div>
-      <button className="btn_add">Add to Cart</button>
+      <button className="btn_add" onClick={() => addItem(pros.product)}>
+        Add to Cart
+      </button>
     </div>
   );
 };
