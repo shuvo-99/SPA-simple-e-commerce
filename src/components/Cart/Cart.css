@@ -1,14 +1,5 @@
 .cart {
-  background-color: #fbd57d;
-  width: 100%;
-
   padding: 25px;
-  /* position: sticky; */
-  position: fixed;
-  /* top: 0; */
-  height: 100%;
-}
-
-.cart h5 {
-  /* margin: 0; */
+  position: sticky;
+  top: 0;
 }

@@ -7,3 +7,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+
+.cart_container {
+  background-color: #fbd57d;
+}
