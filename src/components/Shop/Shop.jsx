@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./Shop.css";
 import Product from "../Product/Product";
 import Cart from "../Cart/Cart";
-import { addToDb, getShoppingCart } from "../../local_storage/localStorage";
+import {
+  addToDb,
+  deleteShoppingCart,
+  getShoppingCart,
+} from "../../local_storage/localStorage";
 import Header from "../Header/Header";
 
 const Shop = () => {
@@ -60,6 +64,11 @@ const Shop = () => {
     addToDb(item.id);
   };
 
+  const handleClearCart = () => {
+    addToCart([]);
+    deleteShoppingCart();
+  };
+
   return (
     <div className="shop_container">
       <div className="product_container">
@@ -72,7 +81,7 @@ const Shop = () => {
         ))}
       </div>
       <div className="cart_container">
-        <Cart carts={carts}></Cart>
+        <Cart carts={carts} handleClearCart={handleClearCart}></Cart>
       </div>
     </div>
   );
