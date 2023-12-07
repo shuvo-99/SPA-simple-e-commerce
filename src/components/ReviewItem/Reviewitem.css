@@ -1,0 +1,34 @@
+.items {
+  width: 517px;
+  border: 1px solid blueviolet;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.items img {
+  width: 91px;
+  height: 91px;
+  border-radius: 6px;
+}
+
+.items_detail p {
+  margin: 0 15px;
+}
+
+.items_detail {
+  flex-grow: 1;
+}
+
+.btn_del {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: rgb(245, 179, 179);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+}

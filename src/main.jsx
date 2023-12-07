@@ -9,6 +9,7 @@ import LandingPage from "./components/Home/LandingPage.jsx";
 import Inventory from "./components/Inventory/Inventory.jsx";
 import OrderReview from "./components/OrderReview/OrderReview.jsx";
 import Login from "./components/Login/Login.jsx";
+import loadData from "./LoadData/LoadData.js";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
       {
         path: "/order_review",
         element: <OrderReview></OrderReview>,
+        loader: loadData,
       },
       {
         path: "/manage_inventory",
