@@ -2,7 +2,7 @@ import React from "react";
 import "./Cart.css";
 
 const Cart = (pros) => {
-  const { carts, handleClearCart } = pros;
+  const { carts, handleClearCart, children } = pros;
 
   let total = 0;
   let total_shipping = 0;
@@ -32,7 +32,11 @@ const Cart = (pros) => {
       <p>Total Shipping Charge: ${total_shipping}</p>
       <p>Tax: ${tax}</p>
       <h4>Grand Total: ${grand_total}</h4>
-      <button onClick={handleClearCart}> Clear Cart</button>
+      <button onClick={handleClearCart} style={{ marginBottom: "10px" }}>
+        {" "}
+        Clear Cart
+      </button>
+      {children}
     </div>
   );
 };

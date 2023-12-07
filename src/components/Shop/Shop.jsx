@@ -8,6 +8,7 @@ import {
   getShoppingCart,
 } from "../../local_storage/localStorage";
 import Header from "../Header/Header";
+import { Link } from "react-router-dom";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -81,7 +82,11 @@ const Shop = () => {
         ))}
       </div>
       <div className="cart_container">
-        <Cart carts={carts} handleClearCart={handleClearCart}></Cart>
+        <Cart carts={carts} handleClearCart={handleClearCart}>
+          <Link to="/order_review">
+            <button>{`Review Items ->`}</button>
+          </Link>
+        </Cart>
       </div>
     </div>
   );

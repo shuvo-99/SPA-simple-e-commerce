@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Cart from "../Cart/Cart";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import ReviewItem from "../ReviewItem/ReviewItem";
 import "./OrderReview.css";
 import {
@@ -36,7 +36,11 @@ const OrderReview = () => {
         ))}
       </div>
       <div className="cart_container">
-        <Cart carts={cart} handleClearCart={handleClearCart}></Cart>
+        <Cart carts={cart} handleClearCart={handleClearCart}>
+          <Link to="/manage_inventory">
+            <button>{`Check Out ->`}</button>
+          </Link>
+        </Cart>
       </div>
     </div>
   );
