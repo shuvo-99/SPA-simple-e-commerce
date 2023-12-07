@@ -2,7 +2,7 @@ import React from "react";
 import "./Reviewitem.css";
 
 const ReviewItem = (pros) => {
-  const { img, name, price, shipping } = pros.product;
+  const { id, img, name, price, shipping } = pros.product;
   return (
     <div className="items">
       <img src={img} />
@@ -11,7 +11,11 @@ const ReviewItem = (pros) => {
         <p>Price: ${price}</p>
         <p>Shipping Price: ${shipping}</p>
       </div>
-      <button className="btn_del" style={{ color: "red" }}>
+      <button
+        onClick={() => pros.handleRemoveFromCart(id)}
+        className="btn_del"
+        style={{ color: "red" }}
+      >
         <b>X</b>
       </button>
     </div>
