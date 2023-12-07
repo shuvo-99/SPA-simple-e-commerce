@@ -3,6 +3,7 @@ import "./Shop.css";
 import Product from "../Product/Product";
 import Cart from "../Cart/Cart";
 import { addToDb, getShoppingCart } from "../../local_storage/localStorage";
+import Header from "../Header/Header";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
