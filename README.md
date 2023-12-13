@@ -6,8 +6,12 @@ Have to change the git repo name after completeing it.
 
 Features -
 
-1. React Routes Used
+- React Routes Used
 
-2. Data stored in Local Storage
+- Data stored in Local Storage
 
-3. Can add and Delete items from cart
+- Can add and Delete items from cart
+
+- Login SignUp by firebase email password
+
+- Private Routes
