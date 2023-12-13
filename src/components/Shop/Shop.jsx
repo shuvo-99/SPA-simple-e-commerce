@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./Shop.css";
 import Product from "../Product/Product";
 import Cart from "../Cart/Cart";
@@ -7,18 +7,26 @@ import {
   deleteShoppingCart,
   getShoppingCart,
 } from "../../local_storage/localStorage";
-import Header from "../Header/Header";
+// import Header from "../Header/Header";
 import { Link } from "react-router-dom";
 
 const Shop = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const [products, setProducts] = useState([]);
 
   const [carts, addToCart] = useState([]);
 
   useEffect(() => {
+    setIsLoading(true);
     fetch("products.json")
       .then((res) => res.json())
-      .then((data) => setProducts(data));
+      .then((data) => setProducts(data))
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   }, []);
 
   useEffect(() => {
@@ -69,6 +77,15 @@ const Shop = () => {
     addToCart([]);
     deleteShoppingCart();
   };
+
+  // Spinner Added
+  if (isLoading) {
+    return (
+      <div className="spinner-container">
+        <div className="custom-loader"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="shop_container">
