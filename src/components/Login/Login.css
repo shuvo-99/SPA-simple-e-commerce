@@ -5,20 +5,20 @@ Reset some default styles * {
 }
 
 /* Style the login container */
-.signup-container {
+.login-container {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: center;
   width: 600px;
-  height: 550px;
+  height: 400px;
   margin: 20px auto;
   /* min-height: 100vh; */
 }
 
 /* Style the login form */
-#signup-form {
+#login-form {
   display: flex;
   flex-direction: column;
 }
@@ -37,8 +37,7 @@ label {
 }
 
 input[type="text"],
-input[type="password"],
-input[type="email"] {
+input[type="password"] {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;

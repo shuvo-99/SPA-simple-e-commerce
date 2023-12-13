@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+// import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home/Home.jsx";
@@ -10,6 +10,7 @@ import Inventory from "./components/Inventory/Inventory.jsx";
 import OrderReview from "./components/OrderReview/OrderReview.jsx";
 import Login from "./components/Login/Login.jsx";
 import loadData from "./LoadData/LoadData.js";
+import Signup from "./components/Signup/Signup.jsx";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/signup",
+        element: <Signup></Signup>,
       },
       {
         path: "*",
